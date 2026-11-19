@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Chivo:wght@400;600&amp;family=Space+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;family=Space+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111318;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-gunmetal": "#12161F", "primary-container": "#e01a22", "surface": "#111318", "on-tertiary": "#00363a", "cyan-scan": "#67E8F9", "cyan-dim": "#0284C7", "primary": "#ffb4ac", "hud-glass": "rgba(10, 12, 16, 0.78)", "on-tertiary-fixed": "#002022", "outline": "#ae8883", "surface-bright": "#37393e", "inverse-on-surface": "#2f3035", "surface-container": "#1e2024", "primary-fixed": "#ffdad6", "tertiary-fixed-dim": "#00dbe9", "on-secondary-fixed": "#271900", "error-container": "#93000a", "surface-subtle": "#1B2230", "surface-container-highest": "#333539", "secondary-fixed-dim": "#ffba20", "surface-border": "#283447", "on-tertiary-container": "#e2fdff", "on-secondary-container": "#6b4b00", "inverse-primary": "#c00015", "crimson-deep": "#8F0D13", "on-surface": "#e2e2e8", "surface-container-high": "#282a2e", "error": "#ffb4ab", "secondary-fixed": "#ffdea8", "inverse-surface": "#e2e2e8", "on-secondary": "#412d00", "on-background": "#e2e2e8", "surface-tint": "#ffb4ac", "on-secondary-fixed-variant": "#5e4200", "surface-container-low": "#1a1c20", "secondary": "#ffdb9d", "on-error": "#690005", "on-primary": "#690006", "on-tertiary-fixed-variant": "#004f54", "on-surface-variant": "#e7bdb8", "background": "#111318", "on-primary-container": "#fff6f5", "surface-dim": "#111318", "tertiary-container": "#007e86", "on-primary-fixed-variant": "#93000d", "on-primary-fixed": "#410002", "gold-glow": "#FFE066", "on-error-container": "#ffdad6", "primary-fixed-dim": "#ffb4ac", "gold-core": "#F59E0B", "text-primary": "#F8FAFC", "surface-container-lowest": "#0c0e12", "crimson-bright": "#FF2A33", "outline-variant": "#5d3f3c", "tertiary-fixed": "#7df4ff", "secondary-container": "#feb700", "surface-variant": "#333539", "tertiary": "#00dbe9", "text-muted": "#94A3B8" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "margin-mobile": "1rem", "margin": "1.5rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "1rem", "space-xl": "2rem", "space-lg": "1.25rem" }, fontFamily: { "body-lg": ["Chivo"], "label-md": ["Space Mono"], "title-md": ["Chivo"], "headline-xl": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-sm": ["Space Mono"], "body-md": ["Chivo"], "label-lg": ["Space Mono"], "headline-xl-mobile": ["Space Grotesk"] }, fontSize: { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.12em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } }</script><style>body { min-height: max(884px, 100dvh); }</style></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-gunmetal/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Project Garuda Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9PqaTUyU2oZjv6b9nPiihZFHa6_2w9H5UR4fVGg42XTy7T8YYvANf1R8w-fTUnjO0nfuqaHdTkWHpWGAXoIxLdeDQPrd6ZuaTND0X232ml4qMSWhWeyr3RYMdK7wf9CvVSHWzZPzEUtfrkWJ7CF2a7LWgL-kq6PpHcPpzMFPjUbX_8U1BTx5EoJFVrp-1jEe_5LPWPzTMWgrTstjFWIWjzM64O-m7KKwT1Z3ZC_E"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">SARC//OS v4.2</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-gold-core animate-pulse"></span></div><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-text-primary tracking-tight truncate">Sarc Lab</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-subtle text-gold-glow uppercase">MK-IX</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-label-sm text-label-sm text-text-muted uppercase">CORE LINK</span><div class="w-12 h-1.5 rounded-full bg-surface-container overflow-hidden flex"><div class="w-3/4 h-full bg-gradient-to-r from-gold-core to-gold-glow"></div></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Facility Telemetry Header Strip -->
+<div class="px-margin-mobile py-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(0,219,233,0.8)] animate-pulse"></span>
+<span class="font-label-md text-label-md text-cyan-scan uppercase tracking-wider">SARC QUANTUM LAB // AGRA FLIGHT DOCK 03</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-subtle">
+<span class="font-label-sm text-label-sm text-text-muted">SECTOR</span>
+<span class="font-label-sm text-label-sm text-gold-glow uppercase font-bold">AGR-09</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="flex items-center justify-between px-space-sm py-1 rounded bg-surface-gunmetal">
+<span class="font-label-sm text-label-sm text-text-muted">FACILITY STABILITY</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">security</span>
+<span class="font-label-md text-label-md text-text-primary">99.8%</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-space-sm py-1 rounded bg-surface-gunmetal">
+<span class="font-label-sm text-label-sm text-text-muted">CORE FREQUENCY</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-gold-glow">bolt</span>
+<span class="font-label-md text-label-md text-gold-glow">432.8 THz</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Resource Counter Ribbon -->
+<div class="px-margin-mobile py-2 bg-surface-container-low flex items-center justify-between overflow-x-auto gap-space-md">
+<div class="flex items-center gap-1.5 shrink-0">
+<div class="w-6 h-6 rounded flex items-center justify-center bg-surface-subtle text-cyan-scan">
+<span class="material-symbols-outlined text-[14px]">grid_goldenratio</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted leading-none">NANOTECH</span>
+<span class="font-label-md text-label-md text-text-primary">14,200</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<div class="w-6 h-6 rounded flex items-center justify-center bg-surface-subtle text-gold-glow">
+<span class="material-symbols-outlined text-[14px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted leading-none">PLASMA CRYSTALS</span>
+<span class="font-label-md text-label-md text-gold-glow">850</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<div class="w-6 h-6 rounded flex items-center justify-center bg-surface-subtle text-crimson-bright">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted leading-none">RESEARCH PTS</span>
+<span class="font-label-md text-label-md text-text-primary">3,400</span>
+</div>
+</div>
+</div>
+<!-- Central Containment Chamber Viewport (Visual Centerpiece) -->
+<div class="relative w-full overflow-hidden bg-surface-container-lowest">
+<div class="relative w-full h-80 overflow-hidden">
+<!-- Full-bleed background render of Agra Lab with the golden core -->
+<img alt="SARC Agra Laboratory Containment Chamber" class="w-full h-full object-cover object-center opacity-85 filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQTpPYxnPXlaQs9NWVLkXqeq0kc9JX2vBvzieDVhWnBkkUSR8tL3F_AlTQchAsdXH8w_UNP3zO-IEP6eoGhMroijDAb3Hf1JZWtJQfoSBEx5qCymOXWYc2e32ahKVwfjEzknW-mzSmWNqZg2Ww7d0nGAjzjDZV-fKTZpF2PHjwNszn9swwdQEpWrFesxAmhmhbk7tcIbtusHfQygHxOakLakrG3UjtUFlS2ieTF_k"/>
+<!-- Holographic Scanline Overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-transparent to-surface pointer-events-none"></div>
+<!-- Holographic Chamfered Target Overlay & HUD Telemetry -->
+<div class="absolute inset-0 p-space-md flex flex-col justify-between pointer-events-none">
+<!-- Top status HUD -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-hud-glass backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-gold-glow uppercase">CHAMBER: ACTIVE CONFINEMENT</span>
+<span class="material-symbols-outlined text-[12px] text-gold-core animate-spin">cyclone</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-hud-glass backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-cyan-scan">ISOTOPE: VAJRA-79</span>
+</div>
+</div>
+<!-- Center Chamber Crosshair & Optical Concentric Rings -->
+<div class="self-center flex items-center justify-center relative w-28 h-28">
+<div class="absolute inset-0 rounded-full border border-gold-glow/30 animate-ping"></div>
+<div class="absolute inset-2 rounded-full border border-cyan-scan/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-gold-core shadow-[0_0_12px_rgba(245,158,11,1)]"></div>
+<div class="absolute -bottom-5 px-1.5 py-0.5 rounded bg-surface-gunmetal/90">
+<span class="font-label-sm text-label-sm text-gold-glow">FLUX PEAK</span>
+</div>
+</div>
+<!-- Bottom Chamber HUD Telemetry Bar -->
+<div class="flex items-end justify-between">
+<div class="flex flex-col gap-0.5 bg-hud-glass p-2 rounded backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-text-muted">CONTAINMENT FIELD</span>
+<span class="font-headline-md text-headline-md text-cyan-scan">OPTIMAL</span>
+</div>
+<div class="flex flex-col items-end gap-0.5 bg-hud-glass p-2 rounded backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-text-muted">POWER DISSIPATION</span>
+<span class="font-headline-md text-headline-md text-gold-glow">0.04 GW</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Golden Energy Core Diagnostic Dials Section -->
+<div class="p-margin-mobile bg-surface-gunmetal flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-gold-glow text-[16px]">sensors</span>
+<span class="font-label-md text-label-md text-gold-glow uppercase">CONTAINMENT TELEMETRY DIALS</span>
+</div>
+<span class="font-label-sm text-label-sm text-cyan-scan">AUTO-CYCLING</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Dial 1 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-text-muted mb-1">MAG FLUX</span>
+<span class="font-headline-md text-headline-md text-cyan-scan leading-none">98.4<span class="text-[11px] ml-0.5">T</span></span>
+<div class="w-full h-1 bg-surface-subtle rounded-full mt-2 overflow-hidden">
+<div class="w-[98%] h-full bg-cyan-scan"></div>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted mt-1">NOMINAL</span>
+</div>
+<!-- Dial 2 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-text-muted mb-1">CORE TEMP</span>
+<span class="font-headline-md text-headline-md text-gold-glow leading-none">4,250<span class="text-[11px] ml-0.5">K</span></span>
+<div class="w-full h-1 bg-surface-subtle rounded-full mt-2 overflow-hidden">
+<div class="w-[85%] h-full bg-gold-core"></div>
+</div>
+<span class="font-label-sm text-label-sm text-gold-glow mt-1">STABLE</span>
+</div>
+<!-- Dial 3 -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-text-muted mb-1">HARMONIC</span>
+<span class="font-headline-md text-headline-md text-text-primary leading-none">100<span class="text-[11px] ml-0.5">%</span></span>
+<div class="w-full h-1 bg-surface-subtle rounded-full mt-2 overflow-hidden">
+<div class="w-full h-full bg-primary-container"></div>
+</div>
+<span class="font-label-sm text-label-sm text-cyan-scan mt-1">LOCKED</span>
+</div>
+</div>
+<!-- Quick Action Controls for Containment -->
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<button class="py-2 px-1 rounded bg-surface-container-high hover:bg-surface-bright flex flex-col items-center justify-center gap-1 active:scale-95 transition-all text-on-surface" id="btnStabilize">
+<span class="material-symbols-outlined text-[16px] text-cyan-scan">tune</span>
+<span class="font-label-sm text-label-sm text-text-primary text-center">STABILIZE FLUX</span>
+</button>
+<button class="py-2 px-1 rounded bg-surface-container-high hover:bg-surface-bright flex flex-col items-center justify-center gap-1 active:scale-95 transition-all text-on-surface" id="btnInfuse">
+<span class="material-symbols-outlined text-[16px] text-gold-glow">join_inner</span>
+<span class="font-label-sm text-label-sm text-text-primary text-center">INFUSE NANO</span>
+</button>
+<button class="py-2 px-1 rounded bg-surface-container-high hover:bg-surface-bright flex flex-col items-center justify-center gap-1 active:scale-95 transition-all text-on-surface" id="btnHarvest">
+<span class="material-symbols-outlined text-[16px] text-crimson-bright">flare</span>
+<span class="font-label-sm text-label-sm text-text-primary text-center">HARVEST CORE</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AVI AI Research Intelligence Dialogue Terminal -->
+<div class="p-margin-mobile">
+<div class="p-space-md rounded bg-surface-gunmetal shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Glow ambient corner -->
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-cyan-dim/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded flex items-center justify-center bg-surface-subtle text-cyan-scan shadow-[0_0_8px_rgba(103,232,249,0.4)]">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-cyan-scan tracking-widest">[AVI SYSTEM OS // v4.2]</span>
+<span class="font-label-md text-label-md text-text-primary">SYNAPSE TERMINAL</span>
+</div>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-highest transition-colors" id="btnVoiceQuery">
+<span class="material-symbols-outlined text-[14px] text-gold-glow">mic</span>
+<span class="font-label-sm text-label-sm text-gold-glow">QUERY</span>
+</button>
+</div>
+<!-- Dialogue text box -->
+<div class="p-space-sm rounded bg-surface-container-lowest text-text-primary">
+<p class="font-body-md text-body-md leading-relaxed">
+<span class="text-cyan-scan font-bold">"Namaste Aryan Bhaiya!</span> The anomalous golden core radiation has unlocked a new molecular schematic for the <span class="text-gold-glow font-bold">Mark-X Vajra prototype</span>. Agra grid harmonics remain stable."
+        </p>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm">AUDIO WAVEFORM: CALM</span>
+</div>
+<button class="font-label-sm text-label-sm text-cyan-scan underline uppercase hover:text-text-primary">VIEW SARC LAB LOGS</button>
+</div>
+</div>
+</div>
+<!-- Research & Development Modules -->
+<div class="px-margin-mobile flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-crimson-bright text-[18px]">hub</span>
+<span class="font-headline-md text-headline-md text-text-primary">R&amp;D MODULE TREES</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-subtle text-cyan-scan">4 ACTIVE</span>
+</div>
+<!-- Module 1: Golden Plasma Synthesis -->
+<div class="p-space-md rounded bg-surface-gunmetal shadow-md flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-gold-core/20 text-gold-glow font-bold">TIER IV</span>
+<span class="font-title-md text-title-md text-text-primary">Golden Plasma Synthesis</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted mt-0.5">Harnessing high-energy solar conduit particles for Garuda flight core</span>
+</div>
+<span class="font-label-sm text-label-sm text-gold-glow px-2 py-0.5 rounded bg-surface-container shrink-0">IN PROGRESS</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-muted">COMPLETION: 78%</span>
+<span class="text-gold-glow font-bold">ETA 14m 32s</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="w-[78%] h-full bg-gradient-to-r from-gold-core to-gold-glow shadow-[0_0_10px_rgba(255,224,102,0.5)]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-cyan-scan">science</span>
+<span class="font-label-sm text-label-sm text-text-muted">+120MW Plasma Cap</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-cyan-scan uppercase active:scale-95 transition-all">BOOST SPEED</button>
+</div>
+</div>
+<!-- Module 2: Nanotech Molecular Weaving -->
+<div class="p-space-md rounded bg-surface-gunmetal shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-subtle text-cyan-scan font-bold">TIER V</span>
+<span class="font-title-md text-title-md text-text-primary">Nanotech Molecular Weaving</span>
+</div>
+<span class="font-body-md text-body-md text-cyan-scan mt-0.5 font-bold">Grants +25% kinetic armor integrity</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-surface-container shrink-0">UNLOCKED</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+<span class="font-label-sm text-label-sm text-text-muted">Applied to Mark-IX and Vanguard suits</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">ACTIVE BUFF</span>
+</div>
+</div>
+<!-- Module 3: AVI Quantum Cognitive Expansion -->
+<div class="p-space-md rounded bg-surface-gunmetal shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-crimson-deep/40 text-primary font-bold">TIER III</span>
+<span class="font-title-md text-title-md text-text-primary">AVI Cognitive Expansion</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted mt-0.5">Real-time target trajectory prediction &amp; automated counter-thrusters</span>
+</div>
+<span class="font-label-sm text-label-sm text-gold-glow px-2 py-0.5 rounded bg-surface-container shrink-0">READY</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-text-muted">COST: 1,200</span>
+<span class="material-symbols-outlined text-[12px] text-crimson-bright">psychology</span>
+</div>
+<button class="px-3 py-1.5 rounded bg-primary-container hover:bg-crimson-bright font-label-md text-label-md text-on-primary-container uppercase shadow-[0_0_12px_rgba(224,26,34,0.4)] active:scale-95 transition-all">UPGRADE NOW</button>
+</div>
+</div>
+<!-- Module 4: Propulsion Dynamics -->
+<div class="p-space-md rounded bg-surface-gunmetal shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-subtle text-text-muted font-bold">TIER II</span>
+<span class="font-title-md text-title-md text-text-primary">Propulsion Dynamics</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted mt-0.5">Sub-orbital thruster micro-nozzle calibration for Mach 3.2 breakout</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted px-2 py-0.5 rounded bg-surface-container shrink-0">LOCKED</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-text-muted">REQUIRES: PLASMA TIER IV SYNTHESIS</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-text-muted font-label-sm text-label-sm uppercase" disabled="">INSPECT</button>
+</div>
+</div>
+</div>
+<!-- Bottom Lab Action Dock -->
+<div class="p-margin-mobile pt-0 flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Secondary Action -->
+<button class="py-3 px-space-md rounded bg-surface-gunmetal hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 text-text-primary active:scale-98">
+<span class="material-symbols-outlined text-[18px] text-cyan-scan">precision_manufacturing</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">CRAFT NANO</span>
+</button>
+<!-- Primary Hero CTA with double-chamfer feel -->
+<button class="py-3 px-space-md rounded bg-primary-container hover:bg-crimson-bright shadow-[0_0_20px_rgba(224,26,34,0.45)] transition-all flex items-center justify-center gap-2 text-on-primary-container active:scale-98">
+<span class="material-symbols-outlined text-[18px] text-gold-glow animate-pulse">fast_forward</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">ACCELERATE</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Lab micro-interactions
+  const btnStabilize = document.getElementById('btnStabilize');
+  const btnInfuse = document.getElementById('btnInfuse');
+  const btnHarvest = document.getElementById('btnHarvest');
+  const btnVoiceQuery = document.getElementById('btnVoiceQuery');
+
+  if (btnStabilize) {
+    btnStabilize.addEventListener('click', () => {
+      btnStabilize.classList.add('bg-cyan-dim/30');
+      setTimeout(() => btnStabilize.classList.remove('bg-cyan-dim/30'), 400);
+    });
+  }
+
+  if (btnInfuse) {
+    btnInfuse.addEventListener('click', () => {
+      btnInfuse.classList.add('bg-gold-core/30');
+      setTimeout(() => btnInfuse.classList.remove('bg-gold-core/30'), 400);
+    });
+  }
+
+  if (btnHarvest) {
+    btnHarvest.addEventListener('click', () => {
+      btnHarvest.classList.add('bg-crimson-deep/40');
+      setTimeout(() => btnHarvest.classList.remove('bg-crimson-deep/40'), 400);
+    });
+  }
+
+  if (btnVoiceQuery) {
+    btnVoiceQuery.addEventListener('click', () => {
+      btnVoiceQuery.classList.toggle('text-crimson-bright');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-gunmetal/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-gold-glow"><div class="h-20 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="hangar" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Hangar</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="armory" href="#"><span class="material-symbols-outlined text-[22px]">hardware</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Armory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="hud-combat-simulation" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm uppercase tracking-wider">HUD Combat</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-gold-glow" data-path="sarc-lab" href="#"><span class="material-symbols-outlined text-[22px]">science</span><span class="font-label-sm text-label-sm uppercase tracking-wider">SARC Lab</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="avi-ai" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm uppercase tracking-wider">AVI AI</span></a></div></nav></body></html>

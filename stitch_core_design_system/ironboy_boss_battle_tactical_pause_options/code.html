@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:wght@400;700&amp;family=Chivo:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111318;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@keyframes shakeScreen {
+  0% { transform: translate(0, 0) scale(1); }
+  15% { transform: translate(-3px, 2px) scale(1.008); }
+  30% { transform: translate(3px, -2px) scale(1.008); }
+  45% { transform: translate(-2px, -2px) scale(1.004); }
+  60% { transform: translate(2px, 2px) scale(1.002); }
+  75% { transform: translate(-1px, 1px) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.screen-shake {
+  animation: shakeScreen 0.45s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shockwavePulse {
+  0% { transform: scale(0.2); opacity: 0.9; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+.shockwave-ring {
+  animation: shockwavePulse 0.6s ease-out forwards;
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#ffdb9d", "surface-bright": "#37393e", "on-error-container": "#ffdad6", "on-tertiary": "#00363a", "gold-core": "#F59E0B", "surface-container-high": "#282a2e", "on-tertiary-fixed-variant": "#004f54", "secondary-fixed": "#ffdea8", "secondary-fixed-dim": "#ffba20", "on-secondary": "#412d00", "tertiary-fixed": "#7df4ff", "on-primary-fixed-variant": "#93000d", "text-primary": "#F8FAFC", "surface-variant": "#333539", "surface": "#111318", "surface-border": "#283447", "tertiary-fixed-dim": "#00dbe9", "surface-container-highest": "#333539", "surface-container": "#1e2024", "primary-fixed": "#ffdad6", "on-surface": "#e2e2e8", "cyan-scan": "#67E8F9", "on-secondary-fixed-variant": "#5e4200", "tertiary": "#00dbe9", "text-muted": "#94A3B8", "on-surface-variant": "#e7bdb8", "outline": "#ae8883", "primary-fixed-dim": "#ffb4ac", "secondary-container": "#feb700", "surface-tint": "#ffb4ac", "on-primary-container": "#fff6f5", "on-secondary-container": "#6b4b00", "gold-glow": "#FFE066", "on-tertiary-fixed": "#002022", "inverse-on-surface": "#2f3035", "surface-subtle": "#1B2230", "surface-container-lowest": "#0c0e12", "error-container": "#93000a", "on-tertiary-container": "#e2fdff", "inverse-primary": "#c00015", "surface-dim": "#111318", "crimson-deep": "#8F0D13", "on-background": "#e2e2e8", "background": "#111318", "on-error": "#690005", "primary": "#ffb4ac", "surface-gunmetal": "#12161F", "tertiary-container": "#007e86", "hud-glass": "rgba(10, 12, 16, 0.78)", "on-primary-fixed": "#410002", "outline-variant": "#5d3f3c", "surface-container-low": "#1a1c20", "crimson-bright": "#FF2A33", "error": "#ffb4ab", "inverse-surface": "#e2e2e8", "cyan-dim": "#0284C7", "on-primary": "#690006", "on-secondary-fixed": "#271900", "primary-container": "#e01a22" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "space-md": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "margin": "1.5rem" }, fontFamily: { "label-lg": ["Space Mono"], "label-sm": ["Space Mono"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Mono"], "headline-xl": ["Space Grotesk"], "title-md": ["Chivo"], "headline-xl-mobile": ["Space Grotesk"], "body-lg": ["Chivo"], "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-md": ["Chivo"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.12em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Return to Armory Hangar" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-high/60 text-on-surface hover:text-secondary-fixed transition-colors active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col ml-space-xs"><span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">SARC ARMORY // W-MOD</span><h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Brahmastra Cannon Customizer</h1></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest/80 rounded-lg"><span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]">bolt</span><span class="font-label-md text-label-md text-secondary-fixed font-bold tracking-tight">4,850</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe"><div class="flex flex-col w-full text-on-surface select-none relative overflow-hidden pb-12" id="tactical-pause-viewport">
+<!-- Combat Frozen Backdrop Scrim & Chromatic Aberration Simulation -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<!-- Boss Arena Freeze Snapshot Placeholder -->
+<div class="w-full h-full bg-cover bg-center brightness-[0.28] contrast-125 saturate-150 scale-105 filter blur-[2px]" data-alt="Cinematic freeze-frame capture of the gigantic biomechanical Yamuna Goliath Harvester hovering menacingly over the mist-laden Yamuna river in Agra during deep violet twilight. Aryan Sagar in the glowing red and gold Garuda MK-IX powered armor is frozen mid-air with thruster trails and radiant energy rings. The Taj Mahal silhouette gleams faintly on the far riverbank under atmospheric high-tech cyan targeting reticles, electrical particle sparks, and glowing volumetric fog." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwnW67yzOIAXN3W0i_xrlkytFKsAjY3SIW1D1o8F3M27yOR35n-Mo-WVW7Lr2LlWCjQB1wf2ZfZEBXrcyO9qRKeSycgKh9pM2VBj1x5obkEynyT2OuQ8e4OTwLTHoELMUF242p0cecaxKTfNDMvJJ46xw7jU1NMiThDN-iHNUVgT4mhav1EYWuh_eAwOhKTpbJIwKP5z5vnvcCmDiOzFGL6ahBBPecSwVNUyARK8A')"></div>
+<!-- Holographic Hex Grid Overlay -->
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#00dbe9_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<!-- Scanline Telemetry Grid -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-scan/[0.04] to-transparent opacity-60 pointer-events-none"></div>
+<!-- Radial Vignette -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#0c0e12_95%)]"></div>
+</div>
+<!-- Tactical Header & Status Beacon -->
+<div class="relative z-10 px-margin-mobile pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-md">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-core opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-crimson-bright"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-gold-glow tracking-widest uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-gold-core">pause_circle</span>
+            TACTICAL RECON PAUSE // COMBAT SUSPENDED
+          </span>
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-tight">ENGAGEMENT: YAMUNA BASIN SECTOR 04</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high/80 px-space-xs py-0.5 rounded text-right">
+<span class="material-symbols-outlined text-cyan-scan text-[14px]">timer</span>
+<span class="font-label-md text-label-md text-cyan-scan" id="freeze-timer">00:41.82</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 px-margin-mobile flex flex-col gap-space-md mt-space-md">
+<!-- Hostile Telemetry vs Player Diagnostic Grid -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Boss Tactical Telemetry Card -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-lg rounded-xl p-space-md shadow-xl overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-crimson-deep/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-crimson-deep/60 text-primary-fixed rounded uppercase font-bold tracking-widest">PHASE 2 / 3</span>
+<span class="font-label-sm text-label-sm text-crimson-bright uppercase animate-pulse">OVERHEATING</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight uppercase leading-tight">Yamuna Goliath Harvester</h2>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">THREAT: OMEGA</span>
+</div>
+<!-- Boss Vital Meters -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<div class="flex flex-col gap-1 bg-surface-container-low/70 p-space-xs rounded-lg">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-muted">HULL INTEGRITY</span>
+<span class="text-crimson-bright font-bold">64%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden p-[1px]">
+<div class="h-full bg-crimson-bright rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container-low/70 p-space-xs rounded-lg">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-muted">ION SHIELD</span>
+<span class="text-cyan-scan font-bold">38%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden p-[1px]">
+<div class="h-full bg-cyan-scan rounded-full" style="width: 38%"></div>
+</div>
+</div>
+</div>
+<!-- Real-Time Boss Weakpoint Callout -->
+<div class="mt-space-sm bg-surface-subtle/80 rounded-lg p-space-xs flex items-center gap-space-xs">
+<div class="p-1 rounded bg-crimson-deep/50 text-gold-glow flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-gold-glow uppercase tracking-wider font-bold">EXPOSED WEAKPOINT: VENTRAL CONDENSER</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px] leading-tight truncate">Extreme vulnerability to Brahmastra Overdrive &amp; Piercing Beams.</span>
+</div>
+</div>
+</div>
+<!-- Player Armor Quick Diagnostic Card -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-lg rounded-xl p-space-md shadow-xl overflow-hidden relative">
+<div class="absolute bottom-0 right-0 w-28 h-28 bg-gold-core/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-gold-core">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">PILOT: ARYAN SAGAR</span>
+<h3 class="font-headline-md text-headline-md text-text-primary tracking-tight">GARUDA MK-IX ARMOR</h3>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded bg-surface-container-high text-secondary-fixed text-label-sm font-label-sm uppercase">COMBAT FIT</div>
+</div>
+<!-- Player Stat Dual Stack -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-xs text-center">
+<div class="bg-surface-container-low/70 p-space-xs rounded-lg flex flex-col">
+<span class="text-label-sm font-label-sm text-text-muted">ARMOR HULL</span>
+<span class="text-title-md font-title-md text-text-primary font-bold">78%</span>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-crimson-bright rounded-full" style="width: 78%"></div>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted text-[8px] mt-0.5">3,920/5,000</span>
+</div>
+<div class="bg-surface-container-low/70 p-space-xs rounded-lg flex flex-col">
+<span class="text-label-sm font-label-sm text-text-muted">DEFLECTOR</span>
+<span class="text-title-md font-title-md text-cyan-scan font-bold">48%</span>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-cyan-scan rounded-full" style="width: 48%"></div>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted text-[8px] mt-0.5">1,150/2,400</span>
+</div>
+<div class="bg-surface-container-low/70 p-space-xs rounded-lg flex flex-col">
+<span class="text-label-sm font-label-sm text-gold-glow">BRAHMASTRA</span>
+<span class="text-title-md font-title-md text-gold-core font-bold uppercase animate-pulse">READY</span>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-gold-core rounded-full" style="width: 99%"></div>
+</div>
+<span class="text-label-sm font-label-sm text-gold-glow text-[8px] mt-0.5">99.4% CHARGED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AVI Tactical Advice Dialogue Hologram -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-xl rounded-xl p-space-md shadow-2xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[15px]">graphic_eq</span>
+</div>
+<span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">AVI SYSTEM OS // TACTICAL ADVICE</span>
+</div>
+<!-- Live Visualizer Bars -->
+<div class="flex items-center gap-[3px] h-3">
+<span class="w-[2px] h-3 bg-cyan-scan animate-pulse"></span>
+<span class="w-[2px] h-2 bg-cyan-scan/80 animate-ping"></span>
+<span class="w-[2px] h-3.5 bg-cyan-scan"></span>
+<span class="w-[2px] h-1.5 bg-cyan-scan/60 animate-pulse"></span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<span class="text-secondary-fixed font-bold">"Namaste Aryan Bhaiya!</span> Combat is frozen while we assess the Goliath’s thermal core. Discharging the <span class="text-gold-glow font-bold">Brahmastra Cannon</span> immediately upon unpausing will stun its primary laser array for 6 seconds!"
+      </p>
+</div>
+<!-- Tactical Mission Objectives & Modifiers Accordion Deck -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-space-md shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-gold-core text-[18px]">assignment_turned_in</span>
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">TACTICAL PARAMETERS</span>
+</div>
+<span class="font-label-sm text-label-sm text-crimson-bright font-bold uppercase tracking-wider">TIME REMAINING: 02:42</span>
+</div>
+<!-- Objective Item -->
+<div class="bg-surface-container-low/70 p-space-xs rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-gold-core text-[18px] shrink-0 mt-0.5">radio_button_unchecked</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-text-primary font-bold">Siphon Manifold Disruption</span>
+<span class="font-body-md text-body-md text-text-muted text-[12px] leading-tight">Destroy the central riverbed siphoning conduit before enrage cycle locks.</span>
+</div>
+</div>
+<!-- Boss Hazards & Countermeasures Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-subtle/60 p-space-xs rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-crimson-bright">
+<span class="material-symbols-outlined text-[14px]">waves</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Tidal Plasma Surge</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-[11px] leading-tight">Parry horizontal sweeps using Dodge Thrust (Mach 2.5).</span>
+</div>
+<div class="bg-surface-subtle/60 p-space-xs rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-cyan-scan">
+<span class="material-symbols-outlined text-[14px]">flight_takeoff</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Shield Escort Drones</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-[11px] leading-tight">3 Delta-7 drones tethered. Repulsor Salvo clears cluster.</span>
+</div>
+</div>
+</div>
+<!-- In-Flight Combat Controls & Settings Quick Panel -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-space-md shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">tune</span>
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">HUD &amp; COMBAT OVERRIDES</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">SYSTEM PRESETS</span>
+</div>
+<!-- Tactical Sliders -->
+<div class="flex flex-col gap-space-sm">
+<!-- Gyro Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-muted uppercase">Garuda Gyro Aim Sensitivity</span>
+<span class="text-gold-core font-bold font-label-sm" id="gyro-val">82%</span>
+</div>
+<input class="w-full accent-gold-core bg-surface-container h-1.5 rounded-lg appearance-none cursor-pointer" max="100" min="10" oninput="document.getElementById('gyro-val').innerText = this.value + '%'" type="range" value="82"/>
+</div>
+<!-- Master Volume Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-muted uppercase">Combat FX &amp; Neural Audio</span>
+<span class="text-cyan-scan font-bold font-label-sm" id="vol-val">90%</span>
+</div>
+<input class="w-full accent-cyan-scan bg-surface-container h-1.5 rounded-lg appearance-none cursor-pointer" max="100" min="0" oninput="document.getElementById('vol-val').innerText = this.value + '%'" type="range" value="90"/>
+</div>
+</div>
+<!-- Tactical Assist Toggles -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<!-- Flight Invert Toggle -->
+<button class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low transition-colors text-left" id="toggle-pitch" onclick="this.classList.toggle('bg-surface-container-high'); this.querySelector('.status-dot').classList.toggle('bg-gold-core'); this.querySelector('.status-dot').classList.toggle('bg-surface-bright');" type="button">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary uppercase">Flight Pitch Invert</span>
+<span class="text-[10px] text-text-muted font-body-md">Standard Y-Axis</span>
+</div>
+<span class="status-dot w-3 h-3 rounded-full bg-gold-core inline-block transition-colors"></span>
+</button>
+<!-- Slow-Mo Dodge Assist Toggle -->
+<button class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low transition-colors text-left" id="toggle-dodge" onclick="this.classList.toggle('bg-surface-container-high'); this.querySelector('.status-dot').classList.toggle('bg-cyan-scan'); this.querySelector('.status-dot').classList.toggle('bg-surface-bright');" type="button">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-primary uppercase">Slow-Mo Assist</span>
+<span class="text-[10px] text-text-muted font-body-md">Tactical Window +0.4s</span>
+</div>
+<span class="status-dot w-3 h-3 rounded-full bg-cyan-scan inline-block transition-colors"></span>
+</button>
+</div>
+</div>
+<!-- Tactical Action Navigation Deck -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- RESUME HERO BUTTON (Pulsing Red and Gold) -->
+<button class="w-full py-space-md px-space-lg rounded-xl bg-primary-container text-on-primary-container font-headline-md text-headline-md flex items-center justify-center gap-space-xs shadow-[0_0_24px_rgba(224,26,34,0.45)] active:scale-[0.98] transition-transform uppercase tracking-wider relative overflow-hidden group" id="resume-btn" onclick="triggerResumeAnim()" type="button">
+<span class="material-symbols-outlined text-[24px] text-gold-glow animate-pulse">play_arrow</span>
+<span class="font-bold text-white tracking-widest">RESUME COMBAT SORTIE</span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</button>
+<!-- Secondary Tactical Actions Row -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="w-full py-space-sm px-space-xs rounded-xl bg-surface-container-high/90 text-text-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-all" onclick="flashFeedback(this, 'CHECKPOINT LOADED')" type="button">
+<span class="material-symbols-outlined text-[18px] text-cyan-scan">replay</span>
+<span>RETRY CHECKPOINT</span>
+</button>
+<button class="w-full py-space-sm px-space-xs rounded-xl bg-surface-container-high/90 text-text-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-all" onclick="toggleMapModal()" type="button">
+<span class="material-symbols-outlined text-[18px] text-gold-core">map</span>
+<span>TACTICAL MAP</span>
+</button>
+</div>
+<!-- Abort Sortie Button -->
+<button class="w-full py-space-xs px-space-sm rounded-lg bg-surface-container-lowest/80 text-error font-label-sm text-label-sm tracking-widest uppercase flex items-center justify-center gap-space-xs active:scale-95 transition-colors" onclick="confirmAbortModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">exit_to_app</span>
+<span>ABORT SORTIE TO SARC LAB HANGAR</span>
+</button>
+</div>
+</div>
+<!-- Sector 04 Tactical Map Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-between p-margin-mobile hidden" id="map-modal">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">AGRA AIRSPACE // SECTOR 04</span>
+<h3 class="font-headline-md text-headline-md text-text-primary">Tactical Harvester Siphon Zone</h3>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-text-primary" onclick="toggleMapModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Static Map Integration -->
+<div class="w-full flex-1 rounded-xl bg-cover bg-center overflow-hidden relative shadow-2xl flex flex-col justify-end p-space-md" data-location="Taj Mahal, Agra, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlgAcxtFzrZBdYWzlZ1AbVdt0NdVgtj5SUNfH2PvjszJGi7rlv9HXdyFTHVL83gH5NpJcGPW4W9VTmH9wo3SJYW7KGUoEhEDaNsohhfMrBAxnfeQEPPRa8WwKSXTCNNbUzNxntsm5Xhf9zTWjBiHIkps6q9wMvRKsD_1mOSSv1MmZkXD6Dp6YgRd1rHl_8lWdGLAdQnlUl2_Yz4TUAFr4pqNi_tkmYJKLdfN72h_c')">
+<div class="bg-surface-container-lowest/85 backdrop-blur-md p-space-sm rounded-lg flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-crimson-bright uppercase font-bold">PRIMARY THREAT ZONE</span>
+<p class="text-body-md font-body-md text-text-primary text-[12px]">Yamuna Siphoning Platform: 450m altitude above Taj perimeter.</p>
+</div>
+<span class="material-symbols-outlined text-crimson-bright text-[28px] animate-pulse">radar</span>
+</div>
+</div>
+<button class="mt-space-md w-full py-space-sm rounded-xl bg-surface-container-high text-secondary-fixed font-label-md text-label-md uppercase tracking-wider" onclick="toggleMapModal()" type="button">
+      CLOSE TACTICAL MAP
+    </button>
+</div>
+<!-- Abort Confirmation Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/95 backdrop-blur-2xl flex items-center justify-center p-margin-mobile hidden" id="abort-modal">
+<div class="bg-surface-container-low rounded-2xl p-space-lg w-full max-w-sm flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-text-primary">ABORT SORTIE?</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Returning to the SARC Hangar will forfeit current Harvester telemetry data and reset the combat encounter to Phase 1. Are you sure, Aryan?
+      </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm rounded-xl bg-error-container text-primary font-label-md text-label-md uppercase font-bold tracking-wider active:scale-95 transition-transform" onclick="history.back()" type="button">
+          CONFIRM ABORT MISSION
+        </button>
+<button class="w-full py-space-sm rounded-xl bg-surface-container-high text-text-primary font-label-md text-label-md uppercase tracking-wider" onclick="confirmAbortModal()" type="button">
+          CANCEL &amp; RETURN TO PAUSE
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tactical Freeze Timer Counter simulation
+  let freezeSeconds = 41.82;
+  const timerEl = document.getElementById('freeze-timer');
+  if (timerEl) {
+    setInterval(() => {
+      freezeSeconds += 0.05;
+      const mins = Math.floor(freezeSeconds / 60);
+      const secs = (freezeSeconds % 60).toFixed(2);
+      timerEl.innerText = `${mins.toString().padStart(2, '0')}:${secs.padStart(5, '0')}`;
+    }, 50);
+  }
+
+  // Resume Combat with Screen Pulse Effect
+  function triggerResumeAnim() {
+    const viewport = document.getElementById('tactical-pause-viewport');
+    if (viewport) {
+      viewport.classList.add('screen-shake');
+      setTimeout(() => {
+        history.back();
+      }, 350);
+    }
+  }
+
+  // Feedback on Retrying Checkpoint
+  function flashFeedback(btn, message) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="text-gold-core font-bold uppercase">${message}</span>`;
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 1200);
+  }
+
+  // Toggle Map Overlay
+  function toggleMapModal() {
+    const mapModal = document.getElementById('map-modal');
+    if (mapModal) {
+      mapModal.classList.toggle('hidden');
+    }
+  }
+
+  // Toggle Abort Confirmation Overlay
+  function confirmAbortModal() {
+    const abortModal = document.getElementById('abort-modal');
+    if (abortModal) {
+      abortModal.classList.toggle('hidden');
+    }
+  }
+</script></main></body></html>

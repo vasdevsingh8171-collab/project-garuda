@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:wght@400;700&amp;family=Chivo:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111318;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#ffdb9d", "surface-bright": "#37393e", "on-error-container": "#ffdad6", "on-tertiary": "#00363a", "gold-core": "#F59E0B", "surface-container-high": "#282a2e", "on-tertiary-fixed-variant": "#004f54", "secondary-fixed": "#ffdea8", "secondary-fixed-dim": "#ffba20", "on-secondary": "#412d00", "tertiary-fixed": "#7df4ff", "on-primary-fixed-variant": "#93000d", "text-primary": "#F8FAFC", "surface-variant": "#333539", "surface": "#111318", "surface-border": "#283447", "tertiary-fixed-dim": "#00dbe9", "surface-container-highest": "#333539", "surface-container": "#1e2024", "primary-fixed": "#ffdad6", "on-surface": "#e2e2e8", "cyan-scan": "#67E8F9", "on-secondary-fixed-variant": "#5e4200", "tertiary": "#00dbe9", "text-muted": "#94A3B8", "on-surface-variant": "#e7bdb8", "outline": "#ae8883", "primary-fixed-dim": "#ffb4ac", "secondary-container": "#feb700", "surface-tint": "#ffb4ac", "on-primary-container": "#fff6f5", "on-secondary-container": "#6b4b00", "gold-glow": "#FFE066", "on-tertiary-fixed": "#002022", "inverse-on-surface": "#2f3035", "surface-subtle": "#1B2230", "surface-container-lowest": "#0c0e12", "error-container": "#93000a", "on-tertiary-container": "#e2fdff", "inverse-primary": "#c00015", "surface-dim": "#111318", "crimson-deep": "#8F0D13", "on-background": "#e2e2e8", "background": "#111318", "on-error": "#690005", "primary": "#ffb4ac", "surface-gunmetal": "#12161F", "tertiary-container": "#007e86", "hud-glass": "rgba(10, 12, 16, 0.78)", "on-primary-fixed": "#410002", "outline-variant": "#5d3f3c", "surface-container-low": "#1a1c20", "crimson-bright": "#FF2A33", "error": "#ffb4ab", "inverse-surface": "#e2e2e8", "cyan-dim": "#0284C7", "on-primary": "#690006", "on-secondary-fixed": "#271900", "primary-container": "#e01a22" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "space-md": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "margin": "1.5rem" }, fontFamily: { "label-lg": ["Space Mono"], "label-sm": ["Space Mono"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Mono"], "headline-xl": ["Space Grotesk"], "title-md": ["Chivo"], "headline-xl-mobile": ["Space Grotesk"], "body-lg": ["Chivo"], "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-md": ["Chivo"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.12em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Return to Armory Hangar" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-high/60 text-on-surface hover:text-secondary-fixed transition-colors active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col ml-space-xs"><span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">SARC ARMORY // W-MOD</span><h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Brahmastra Cannon Customizer</h1></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest/80 rounded-lg"><span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]">bolt</span><span class="font-label-md text-label-md text-secondary-fixed font-bold tracking-tight">4,850</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe"><div class="flex flex-col w-full pb-10 space-y-4 px-gutter-mobile">
+<!-- AVI AI Voice Guidance Stream -->
+<div class="relative w-full rounded-xl bg-surface-container-high/90 p-space-sm shadow-md overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="relative flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-scan text-[22px] animate-pulse">graphic_eq</span>
+<div class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-cyan-scan shadow-[0_0_8px_#67E8F9]"></div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-cyan-scan uppercase">AVI SYSTEM OS // v4.8 [VOCAL LINK]</span>
+<span class="font-label-sm text-label-sm text-gold-glow flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-core animate-ping"></span> LIVE
+          </span>
+</div>
+<p class="font-body-md text-body-md text-text-primary mt-0.5 leading-snug">
+          “Namaste Aryan Bhaiya! Calibrating the Brahmastra emitter with solar isotope Vajra-79 will increase armor penetration by 30%!”
+        </p>
+</div>
+</div>
+</div>
+<!-- Central 3D Interactive Viewport -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest p-space-sm shadow-xl overflow-hidden flex flex-col">
+<!-- Viewport HUD Overlay Header -->
+<div class="flex items-center justify-between z-10 mb-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-crimson-bright text-[18px]">adjust</span>
+<span class="font-label-md text-label-md text-text-primary uppercase">SCHEMATIC // MK-GARUDA-BRHM-V</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-text-muted" id="wireframeTag">RENDER: SOLID</span>
+<span class="px-1.5 py-0.5 rounded bg-crimson-deep/60 font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">CELESTIAL TIER</span>
+</div>
+</div>
+<!-- 3D Vector Canvas Viewport -->
+<div class="relative w-full h-64 rounded-lg bg-surface-gunmetal overflow-hidden flex items-center justify-center">
+<canvas class="w-full h-full cursor-grab active:cursor-grabbing" id="cannonCanvas"></canvas>
+<!-- Thermal Telemetry Badges (Overlaid on Viewport) -->
+<div class="absolute top-2 left-2 flex flex-col gap-1 z-10 pointer-events-none">
+<div class="px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-gold-core text-[14px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm text-text-muted">TEMP:</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">3,420°K</span>
+</div>
+<div class="px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-cyan-scan text-[14px]">waves</span>
+<span class="font-label-sm text-label-sm text-text-muted">CORE FLUX:</span>
+<span class="font-label-sm text-label-sm text-cyan-scan font-bold">99.8%</span>
+</div>
+</div>
+<div class="absolute top-2 right-2 flex flex-col items-end z-10 pointer-events-none">
+<div class="px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-crimson-bright text-[14px]">warning</span>
+<span class="font-label-sm text-label-sm text-text-muted">OVERHEAT:</span>
+<span class="font-label-sm text-label-sm text-crimson-bright font-bold">85% CAP</span>
+</div>
+</div>
+<!-- Plasma Test Beam Burst Graphic Overlay (Triggered by button) -->
+<div class="absolute inset-0 bg-gold-core/0 pointer-events-none transition-all duration-300 flex items-center justify-center" id="beamFlash">
+<div class="w-0 h-4 bg-gradient-to-r from-crimson-bright via-gold-glow to-cyan-scan rounded-full filter blur-[2px] opacity-0 transition-all duration-150" id="beamLine"></div>
+</div>
+<!-- Micro-reticle alignment markers -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-25">
+<div class="w-48 h-48 rounded-full border-dashed border-cyan-scan/30 flex items-center justify-center">
+<div class="w-24 h-24 rounded-full border border-secondary-fixed/40"></div>
+</div>
+</div>
+</div>
+<!-- Viewport Tactile Controls -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm z-10">
+<button class="flex items-center justify-center gap-1 py-2 px-1 rounded-lg bg-surface-container text-on-surface hover:text-cyan-scan active:scale-95 transition-all shadow-sm" id="rotateToggleBtn" type="button">
+<span class="material-symbols-outlined text-[16px] text-cyan-scan">sync</span>
+<span class="font-label-sm text-label-sm uppercase">Auto-Spin</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-1 rounded-lg bg-surface-container text-on-surface hover:text-gold-core active:scale-95 transition-all shadow-sm" id="wireframeBtn" type="button">
+<span class="material-symbols-outlined text-[16px] text-gold-core">view_in_ar</span>
+<span class="font-label-sm text-label-sm uppercase">X-Ray Wire</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-1 rounded-lg bg-primary-container text-on-primary-container hover:brightness-110 active:scale-95 transition-all shadow-[0_0_12px_rgba(224,26,34,0.4)]" id="fireBeamBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">Fire Beam</span>
+</button>
+</div>
+</div>
+<!-- Weapon Specs & Celestial Power Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-md flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">WEAPON CLASSIFICATION</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">BRAHMASTRA CANNON</h2>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">COMBAT RATING</span>
+<span class="font-label-lg text-label-lg text-gold-glow font-bold tracking-tight">142,500 WPWR</span>
+</div>
+</div>
+<!-- Dynamic Metrics Progress Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-text-muted">ENERGY BEAM DMG</span>
+<span class="font-label-sm text-label-sm text-crimson-bright font-bold">94/100</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-crimson-deep to-crimson-bright rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-text-muted">CHARGE VELOCITY</span>
+<span class="font-label-sm text-label-sm text-gold-core font-bold">0.85s (FAST)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary-container to-gold-glow rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-text-muted">PLASMA AOE RADIUS</span>
+<span class="font-label-sm text-label-sm text-cyan-scan font-bold">18 METERS</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-cyan-dim to-cyan-scan rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-text-muted">OVERDRIVE COOLDOWN</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">20s (-4s MK-IX)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modular Component Customizer -->
+<div class="w-full flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">MODULAR UPGRADE BAYS</span>
+<span class="font-label-sm text-label-sm text-cyan-scan">SLOT: FOREARM DOCK</span>
+</div>
+<!-- Category Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="px-3 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap font-bold shadow-sm" type="button">
+        CORE REACTOR
+      </button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-text-primary font-label-md text-label-md whitespace-nowrap" type="button">
+        EMITTER NOZZLE
+      </button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-text-primary font-label-md text-label-md whitespace-nowrap" type="button">
+        COOLING FINS
+      </button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface hover:text-text-primary font-label-md text-label-md whitespace-nowrap" type="button">
+        ENERGY CELL
+      </button>
+</div>
+<!-- Module Selector Grid -->
+<div class="flex flex-col space-y-2">
+<!-- Item 1: Equipped -->
+<div class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high shadow-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-gold-core">
+<span class="material-symbols-outlined text-[24px]">sunny</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary truncate">Ancient Solar Core</span>
+<span class="px-1.5 py-0.2 rounded bg-gold-core/20 text-gold-glow font-label-sm text-label-sm font-bold uppercase">EQUIPPED</span>
+</div>
+<span class="font-body-md text-body-md text-secondary-fixed-dim truncate">+25% Golden Plasma AOE Radius</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gold-core text-[20px] flex-shrink-0">check_circle</span>
+</div>
+<!-- Item 2: Unlocked -->
+<div class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-cyan-scan">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary truncate">Vajra Arc Capacitor</span>
+<span class="px-1.5 py-0.2 rounded bg-cyan-dim/20 text-cyan-scan font-label-sm text-label-sm uppercase">UNLOCKED</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted truncate">Chain lightning pulse on beam impact</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface hover:text-cyan-scan font-label-sm text-label-sm uppercase" type="button">
+          SWAP
+        </button>
+</div>
+<!-- Item 3: Ready to craft -->
+<div class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-crimson-bright">
+<span class="material-symbols-outlined text-[24px]">diamond</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary truncate">Agni Hyper-Focus Crystal</span>
+<span class="px-1.5 py-0.2 rounded bg-crimson-deep/40 text-primary-fixed-dim font-label-sm text-label-sm uppercase">CRAFTABLE</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted truncate">High armor penetration against titan hulls</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold" type="button">
+          CRAFT
+        </button>
+</div>
+<!-- Item 4: Locked -->
+<div class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container/60 opacity-60 shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-text-muted">
+<span class="material-symbols-outlined text-[24px]">ac_unit</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-muted truncate">Yamuna Cryo-Conduit</span>
+<span class="material-symbols-outlined text-text-muted text-[14px]">lock</span>
+</div>
+<span class="font-body-md text-body-md text-text-muted truncate">Converts plasma blast into absolute-zero frost</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-bold">REQ LVL 50</span>
+</div>
+</div>
+</div>
+<!-- SARC Tuning & Calibration Matrix -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-md flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider">FINE TUNING MATRIX</span>
+<span class="font-label-sm text-label-sm text-gold-glow flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span> ACTIVE SENSORS
+      </span>
+</div>
+<!-- Slider 1 -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-text-muted">BEAM FREQUENCY (NARROW FOCUS ↔ WIDE BEAM)</span>
+<span class="font-label-sm text-label-sm text-cyan-scan font-bold" id="beamModVal">780 THz [LANCE]</span>
+</div>
+<input class="w-full accent-cyan-scan h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" id="sliderBeam" max="1000" min="100" type="range" value="780"/>
+</div>
+<!-- Slider 2 -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-text-muted">PLASMA RECOIL DAMPENING</span>
+<span class="font-label-sm text-label-sm text-gold-glow font-bold" id="recoilVal">92% INERTIAL</span>
+</div>
+<input class="w-full accent-gold-core h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" id="sliderRecoil" max="100" min="0" type="range" value="92"/>
+</div>
+<!-- Toggle 3: AVI Sync -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary">AI Neural Targeting Synchronization</span>
+<span class="font-body-md text-body-md text-text-muted">Allow AVI to predictive-track high-velocity aerial bogeys</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="aviSyncToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-text-primary after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-scan"></div>
+</label>
+</div>
+</div>
+<!-- SARC Field Gallery Imagery -->
+<div class="w-full rounded-xl bg-surface-container p-space-sm flex flex-col space-y-2">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">ARMORY HANGAR FOOTAGE // AGRA FACILITY</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="relative h-28 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Futuristic Indian superhero Aryan Sagar in high-tech crimson and gold powered Garuda exoskeleton armor firing a high-voltage golden plasma beam cannon in a dark military testing bunker with holographic telemetry overlays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCalXPTlI-O3JUj7Jzs9Wxx8rO_tmkCBWT9uZ962E0BkAP-pT6Gm8L7iBKK0hhxy5Y2VRZt_g3Bemyq8wt029eYtmacFxaPZoHtQZN-NjkigFsmEPedMPWNDKFuqDIpAH2IYgSEYHXI5fkAeewmakTgqvpi5TEkcThU4fm3IulN2-YxtIZ7CZaVA9PBUDeKy-gQzJJ1lRmLjlxBJlg5mY3eXDt6_vivYgcFnFFJ71g"/>
+<div class="absolute bottom-1 left-1.5 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] font-label-sm text-secondary-fixed">LIVE FIRING ARC</div>
+</div>
+<div class="relative h-28 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High tech SARC laboratory armor workshop showing mechanical robotic arms disassembling and calibrating glowing celestial alien power core conduits in Agra India." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZNFtAprL__xksnH1CvqZ9GLccnG8aTdatRveO9yKjz2f78tLPL23-DJnPUlbuRZ7c_jVqDOR9kUmYud4VhDPHuVwxEIYHMOSLf0b9vM72ugrNu_QzkuEEC2urST3TtXQittiC-zsbkGjLFvYnIYLJhioPIgnQTLfo36PPPSvUsDAJHa-DeAYwlhEXb_LpYeAEPgQ0kDBOapAcABcp0PwOf573Cy9Fwy4YyYxESA"/>
+<div class="absolute bottom-1 left-1.5 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] font-label-sm text-cyan-scan">NANOTECH MOUNT</div>
+</div>
+</div>
+</div>
+<!-- Action Sticky Interaction Bar -->
+<div class="w-full flex flex-col space-y-2 pt-2">
+<button class="w-full py-3.5 rounded-lg bg-primary-container text-on-primary-container hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(224,26,34,0.4)] flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">construction</span>
+<span class="font-headline-md text-headline-md tracking-wide uppercase">CALIBRATE &amp; EQUIP MODS</span>
+</button>
+<div class="flex items-center justify-center gap-3">
+<span class="font-label-sm text-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-cyan-scan text-[14px]">token</span> 250 PLASMA CRYSTALS
+      </span>
+<span class="font-label-sm text-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-gold-core text-[14px]">memory</span> 1,500 NANOTECH ALLOY
+      </span>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:text-cyan-scan active:scale-95 transition-all flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-cyan-scan text-[18px]">videogame_asset</span>
+<span class="font-label-md text-label-md uppercase">TEST IN VR FIRING RANGE</span>
+</button>
+</div>
+</div>
+<!-- Embedded Interactive 3D Canvas Engine Script -->
+<script>
+  (function initBrahmastraViewport() {
+    const canvas = document.getElementById('cannonCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = canvas.parentElement.clientWidth);
+    let height = (canvas.height = canvas.parentElement.clientHeight);
+
+    let angleX = 0.25;
+    let angleY = 0.6;
+    let autoRotate = true;
+    let isWireframe = false;
+    let isFiring = false;
+    let animationId = null;
+
+    // Responsive Canvas
+    window.addEventListener('resize', () => {
+      if (!canvas.parentElement) return;
+      width = canvas.width = canvas.parentElement.clientWidth;
+      height = canvas.height = canvas.parentElement.clientHeight;
+    });
+
+    // Touch & Mouse Drag to Rotate Turntable
+    let isDragging = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    const startDrag = (x, y) => {
+      isDragging = true;
+      lastX = x;
+      lastY = y;
+      autoRotate = false;
+      document.getElementById('rotateToggleBtn').classList.remove('bg-secondary-container', 'text-on-secondary-container');
+    };
+
+    const moveDrag = (x, y) => {
+      if (!isDragging) return;
+      const dx = x - lastX;
+      const dy = y - lastY;
+      angleY += dx * 0.01;
+      angleX = Math.max(-0.6, Math.min(0.6, angleX + dy * 0.01));
+      lastX = x;
+      lastY = y;
+    };
+
+    const stopDrag = () => { isDragging = false; };
+
+    canvas.addEventListener('mousedown', (e) => startDrag(e.clientX, e.clientY));
+    window.addEventListener('mousemove', (e) => moveDrag(e.clientX, e.clientY));
+    window.addEventListener('mouseup', stopDrag);
+
+    canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) startDrag(e.touches[0].clientX, e.touches[0].clientY);
+    });
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1) moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+    });
+    window.addEventListener('touchend', stopDrag);
+
+    // Toggle Buttons
+    const rotateToggleBtn = document.getElementById('rotateToggleBtn');
+    rotateToggleBtn.addEventListener('click', () => {
+      autoRotate = !autoRotate;
+      if (autoRotate) {
+        rotateToggleBtn.classList.add('bg-surface-container-high', 'text-cyan-scan');
+      } else {
+        rotateToggleBtn.classList.remove('bg-surface-container-high', 'text-cyan-scan');
+      }
+    });
+
+    const wireframeBtn = document.getElementById('wireframeBtn');
+    const wireframeTag = document.getElementById('wireframeTag');
+    wireframeBtn.addEventListener('click', () => {
+      isWireframe = !isWireframe;
+      wireframeTag.textContent = isWireframe ? 'RENDER: X-RAY' : 'RENDER: SOLID';
+      wireframeTag.classList.toggle('text-gold-core', isWireframe);
+    });
+
+    // Fire Beam Interaction
+    const fireBeamBtn = document.getElementById('fireBeamBtn');
+    const beamFlash = document.getElementById('beamFlash');
+    const beamLine = document.getElementById('beamLine');
+
+    fireBeamBtn.addEventListener('click', () => {
+      if (isFiring) return;
+      isFiring = true;
+      beamFlash.classList.add('bg-gold-core/20');
+      beamLine.classList.remove('w-0', 'opacity-0');
+      beamLine.classList.add('w-full', 'opacity-100');
+
+      setTimeout(() => {
+        beamFlash.classList.remove('bg-gold-core/20');
+        beamLine.classList.add('w-0', 'opacity-0');
+        beamLine.classList.remove('w-full', 'opacity-100');
+        isFiring = false;
+      }, 450);
+    });
+
+    // Sliders Realtime Feedback
+    const sliderBeam = document.getElementById('sliderBeam');
+    const beamModVal = document.getElementById('beamModVal');
+    sliderBeam.addEventListener('input', (e) => {
+      const val = e.target.value;
+      beamModVal.textContent = val < 400 ? val + ' THz [SCATTER]' : val > 750 ? val + ' THz [LANCE]' : val + ' THz [HARMONIC]';
+    });
+
+    const sliderRecoil = document.getElementById('sliderRecoil');
+    const recoilVal = document.getElementById('recoilVal');
+    sliderRecoil.addEventListener('input', (e) => {
+      recoilVal.textContent = e.target.value + '% INERTIAL';
+    });
+
+    // 3D Geometry of Brahmastra Forearm Cannon
+    // Constructed using 3D line primitives with rotation projection
+    function project(x, y, z) {
+      // Rotation Y
+      const cosY = Math.cos(angleY);
+      const sinY = Math.sin(angleY);
+      const x1 = x * cosY + z * sinY;
+      const z1 = -x * sinY + z * cosY;
+
+      // Rotation X
+      const cosX = Math.cos(angleX);
+      const sinX = Math.sin(angleX);
+      const y2 = y * cosX - z1 * sinX;
+      const z2 = y * sinX + z1 * cosX;
+
+      const fov = 340;
+      const scale = fov / (fov + z2 + 200);
+      return {
+        x: width / 2 + x1 * scale,
+        y: height / 2 + y2 * scale,
+        scale: scale,
+        depth: z2
+      };
+    }
+
+    // Geometry parts: Barrel, Core Chamber, Eagle Filigree Wing Shrouds, Muzzle
+    function render() {
+      ctx.clearRect(0, 0, width, height);
+
+      if (autoRotate) {
+        angleY += 0.015;
+      }
+
+      const time = Date.now() * 0.003;
+
+      // 1. Grid Floor Horizon
+      ctx.strokeStyle = 'rgba(40, 52, 71, 0.4)';
+      ctx.lineWidth = 1;
+      const gridY = 80;
+      for (let i = -160; i <= 160; i += 40) {
+        const p1 = project(i, gridY, -140);
+        const p2 = project(i, gridY, 140);
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+
+        const p3 = project(-160, gridY, i);
+        const p4 = project(160, gridY, i);
+        ctx.beginPath();
+        ctx.moveTo(p3.x, p3.y);
+        ctx.lineTo(p4.x, p4.y);
+        ctx.stroke();
+      }
+
+      // 2. Central Plasma Reactor Sphere
+      const coreP = project(0, 0, 0);
+      const pulseRadius = Math.max(1, (18 + Math.sin(time * 3) * 3) * coreP.scale);
+
+      const radialGrad = ctx.createRadialGradient(coreP.x, coreP.y, 2, coreP.x, coreP.y, pulseRadius * 2);
+      radialGrad.addColorStop(0, '#FFE066');
+      radialGrad.addColorStop(0.5, '#F59E0B');
+      radialGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+
+      ctx.fillStyle = radialGrad;
+      ctx.beginPath();
+      ctx.arc(coreP.x, coreP.y, pulseRadius * 2.2, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 3. Hexagonal Shroud Nodes & Weapon Chassis Lines
+      const nodes = [
+        // Main Arm Cannon Barrel Hexagon
+        {x: -70, y: -20, z: -20}, {x: 80, y: -20, z: -20},
+        {x: 80, y: 20, z: -20},   {x: -70, y: 20, z: -20},
+        {x: -70, y: -20, z: 20},  {x: 80, y: -20, z: 20},
+        {x: 80, y: 20, z: 20},    {x: -70, y: 20, z: 20},
+        // Muzzle Emitter Cone (Front)
+        {x: 120, y: -10, z: -10}, {x: 120, y: 10, z: -10},
+        {x: 120, y: 10, z: 10},   {x: 120, y: -10, z: 10},
+        // Garuda Eagle Wings / Shrouds (Top and Bottom Chamfers)
+        {x: -20, y: -45, z: 0},   {x: 40, y: -40, z: 0},
+        {x: -20, y: 45, z: 0},    {x: 40, y: 40, z: 0}
+      ];
+
+      const edges = [
+        // Base Box
+        [0, 1], [1, 2], [2, 3], [3, 0],
+        [4, 5], [5, 6], [6, 7], [7, 4],
+        [0, 4], [1, 5], [2, 6], [3, 7],
+        // Muzzle Connectors
+        [1, 8], [2, 9], [6, 10], [5, 11],
+        [8, 9], [9, 10], [10, 11], [11, 8],
+        // Eagle Wing Filigree
+        [0, 12], [1, 13], [12, 13],
+        [3, 14], [2, 15], [14, 15]
+      ];
+
+      // Render Structural Lines
+      edges.forEach(([i1, i2], index) => {
+        const p1 = project(nodes[i1].x, nodes[i1].y, nodes[i1].z);
+        const p2 = project(nodes[i2].x, nodes[i2].y, nodes[i2].z);
+
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+
+        if (isWireframe) {
+          ctx.strokeStyle = index > 11 ? '#67E8F9' : '#FFE066';
+          ctx.lineWidth = 1.2;
+        } else {
+          // Solid / Tactical Stylized look
+          ctx.strokeStyle = index > 15 ? '#FF2A33' : index > 11 ? '#F59E0B' : '#E2E2E8';
+          ctx.lineWidth = index > 11 ? 2.2 : 1.5;
+        }
+        ctx.stroke();
+      });
+
+      // Targeting Sights / Optic Node
+      const optic = project(70, -30, 0);
+      ctx.fillStyle = '#67E8F9';
+      ctx.beginPath();
+      ctx.arc(optic.x, optic.y, 3 * optic.scale, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Optical Cyan Crosshair on Muzzle
+      const muzzleTip = project(120, 0, 0);
+      ctx.strokeStyle = 'rgba(103, 232, 249, 0.7)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(muzzleTip.x - 8, muzzleTip.y);
+      ctx.lineTo(muzzleTip.x + 8, muzzleTip.y);
+      ctx.moveTo(muzzleTip.x, muzzleTip.y - 8);
+      ctx.lineTo(muzzleTip.x, muzzleTip.y + 8);
+      ctx.stroke();
+
+      animationId = requestAnimationFrame(render);
+    }
+
+    render();
+  })();
+</script></main></body></html>

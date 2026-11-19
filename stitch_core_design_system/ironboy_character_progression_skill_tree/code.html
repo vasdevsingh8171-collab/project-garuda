@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Chivo:wght@400;600&amp;family=Space+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;family=Space+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111318;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-gunmetal": "#12161F", "primary-container": "#e01a22", "surface": "#111318", "on-tertiary": "#00363a", "cyan-scan": "#67E8F9", "cyan-dim": "#0284C7", "primary": "#ffb4ac", "hud-glass": "rgba(10, 12, 16, 0.78)", "on-tertiary-fixed": "#002022", "outline": "#ae8883", "surface-bright": "#37393e", "inverse-on-surface": "#2f3035", "surface-container": "#1e2024", "primary-fixed": "#ffdad6", "tertiary-fixed-dim": "#00dbe9", "on-secondary-fixed": "#271900", "error-container": "#93000a", "surface-subtle": "#1B2230", "surface-container-highest": "#333539", "secondary-fixed-dim": "#ffba20", "surface-border": "#283447", "on-tertiary-container": "#e2fdff", "on-secondary-container": "#6b4b00", "inverse-primary": "#c00015", "crimson-deep": "#8F0D13", "on-surface": "#e2e2e8", "surface-container-high": "#282a2e", "error": "#ffb4ab", "secondary-fixed": "#ffdea8", "inverse-surface": "#e2e2e8", "on-secondary": "#412d00", "on-background": "#e2e2e8", "surface-tint": "#ffb4ac", "on-secondary-fixed-variant": "#5e4200", "surface-container-low": "#1a1c20", "secondary": "#ffdb9d", "on-error": "#690005", "on-primary": "#690006", "on-tertiary-fixed-variant": "#004f54", "on-surface-variant": "#e7bdb8", "background": "#111318", "on-primary-container": "#fff6f5", "surface-dim": "#111318", "tertiary-container": "#007e86", "on-primary-fixed-variant": "#93000d", "on-primary-fixed": "#410002", "gold-glow": "#FFE066", "on-error-container": "#ffdad6", "primary-fixed-dim": "#ffb4ac", "gold-core": "#F59E0B", "text-primary": "#F8FAFC", "surface-container-lowest": "#0c0e12", "crimson-bright": "#FF2A33", "outline-variant": "#5d3f3c", "tertiary-fixed": "#7df4ff", "secondary-container": "#feb700", "surface-variant": "#333539", "tertiary": "#00dbe9", "text-muted": "#94A3B8" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "margin-mobile": "1rem", "margin": "1.5rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "1rem", "space-xl": "2rem", "space-lg": "1.25rem" }, fontFamily: { "body-lg": ["Chivo"], "label-md": ["Space Mono"], "title-md": ["Chivo"], "headline-xl": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-sm": ["Space Mono"], "body-md": ["Chivo"], "label-lg": ["Space Mono"], "headline-xl-mobile": ["Space Grotesk"] }, fontSize: { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.12em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } }</script><style>body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-gunmetal/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Project Garuda Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9PqaTUyU2oZjv6b9nPiihZFHa6_2w9H5UR4fVGg42XTy7T8YYvANf1R8w-fTUnjO0nfuqaHdTkWHpWGAXoIxLdeDQPrd6ZuaTND0X232ml4qMSWhWeyr3RYMdK7wf9CvVSHWzZPzEUtfrkWJ7CF2a7LWgL-kq6PpHcPpzMFPjUbX_8U1BTx5EoJFVrp-1jEe_5LPWPzTMWgrTstjFWIWjzM64O-m7KKwT1Z3ZC_E"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">SARC//OS v4.2</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-gold-core animate-pulse"></span></div><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-text-primary tracking-tight truncate">Sarc Lab</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-subtle text-gold-glow uppercase">MK-IX</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-label-sm text-label-sm text-text-muted uppercase">CORE LINK</span><div class="w-12 h-1.5 rounded-full bg-surface-container overflow-hidden flex"><div class="w-3/4 h-full bg-gradient-to-r from-gold-core to-gold-glow"></div></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile py-space-sm gap-space-md">
+<!-- Pilot Status & Level Overview Banner -->
+<div class="relative w-full rounded-xl p-space-md bg-surface-gunmetal shadow-lg overflow-hidden flex flex-col gap-space-sm">
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-gold-core/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-10 -bottom-10 w-32 h-32 bg-crimson-bright/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-xs z-10">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-cyan-scan uppercase">SARC PROTOCOL // ARYAN SAGAR</span>
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-scan animate-pulse"></span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight truncate">
+          NEURO-SUIT SYNC: LEVEL 49
+        </h2>
+</div>
+<button class="flex items-center gap-1 px-space-xs py-1 rounded bg-surface-subtle text-text-muted hover:text-gold-glow active:scale-95 transition-all shadow-sm" id="respec-btn">
+<span class="material-symbols-outlined text-[14px]">device_reset</span>
+<span class="font-label-sm text-label-sm uppercase">RESPEC MATRIX</span>
+</button>
+</div>
+<!-- Sync XP Progress Bar -->
+<div class="flex flex-col gap-1 z-10">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">SYNCHRONIZATION HARMONIC</span>
+<span class="font-label-sm text-label-sm text-gold-glow font-bold">84% // 42,000 / 50,000 XP</span>
+</div>
+<div class="relative w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-gradient-to-r from-crimson-deep via-gold-core to-gold-glow w-[84%] rounded-full transition-all duration-700"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-text-primary/20 to-transparent w-full animate-pulse pointer-events-none"></div>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span class="font-label-sm text-label-sm text-cyan-scan">MK-IX ACTIVE</span>
+<span class="font-label-sm text-label-sm text-gold-core uppercase flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">lock</span> LVL 50: UNLOCKS MARK-X PROTOTYPE
+        </span>
+</div>
+</div>
+<!-- Neural Points Badge Bar -->
+<div class="flex items-center justify-between pt-1 z-10">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-high shadow-inner">
+<div class="w-5 h-5 rounded bg-gold-core/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-glow text-[16px]">token</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-gold-glow" id="available-points-counter">4 NEURAL POINTS</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">UNASSIGNED BUFFER</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-text-muted font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-cyan-scan">NEURO-LINK SECURE</span>
+</div>
+</div>
+</div>
+<!-- Branch Discipline Switcher Tabs -->
+<div class="w-full flex flex-col gap-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">SELECT WEAPON MATRIX DISCIPLINE</span>
+<span class="font-label-sm text-label-sm text-gold-glow uppercase">3 BRANCHES</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-surface-gunmetal">
+<!-- Tab 1: Solar Core (Active) -->
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-subtle text-gold-glow shadow-md transition-all" id="tab-solar">
+<span class="material-symbols-outlined text-[20px] text-gold-glow">wb_sunny</span>
+<span class="font-label-sm text-label-sm uppercase text-center font-bold tracking-tight truncate w-full">SOLAR CORE</span>
+<span class="font-label-sm text-[8px] text-text-muted tracking-tighter truncate w-full">BRAHMASTRA</span>
+</button>
+<!-- Tab 2: Nanotech Kinetics -->
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-container transition-all" id="tab-nano">
+<span class="material-symbols-outlined text-[20px] text-cyan-scan">shield_with_heart</span>
+<span class="font-label-sm text-label-sm uppercase text-center tracking-tight truncate w-full">NANOTECH</span>
+<span class="font-label-sm text-[8px] text-text-muted tracking-tighter truncate w-full">KINETICS</span>
+</button>
+<!-- Tab 3: Yamuna Aerodynamics -->
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg text-text-muted hover:text-on-surface hover:bg-surface-container transition-all" id="tab-aero">
+<span class="material-symbols-outlined text-[20px] text-crimson-bright">flight_takeoff</span>
+<span class="font-label-sm text-label-sm uppercase text-center tracking-tight truncate w-full">AERODYNAMICS</span>
+<span class="font-label-sm text-[8px] text-text-muted tracking-tighter truncate w-full">YAMUNA DASH</span>
+</button>
+</div>
+</div>
+<!-- Interactive Visual Skill Tree Node Network -->
+<div class="relative w-full rounded-xl bg-surface-gunmetal p-space-md shadow-xl overflow-hidden flex flex-col gap-space-md">
+<!-- Ambient Holographic Grid Background & Circuit Trace SVGs -->
+<div class="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Connecting Circuit Trace SVG overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+<!-- Trace Tier 1 to Tier 2 -->
+<line class="opacity-90" stroke="#F59E0B" stroke-dasharray="4 2" stroke-width="2" x1="50%" x2="50%" y1="62" y2="132"></line>
+<!-- Trace Tier 2 to Tier 3 -->
+<line class="opacity-100 animate-pulse" stroke="#F59E0B" stroke-width="2.5" x1="50%" x2="50%" y1="172" y2="242"></line>
+<!-- Trace Tier 3 to Tier 4 -->
+<line stroke="#283447" stroke-dasharray="2 3" stroke-width="2" x1="50%" x2="50%" y1="282" y2="352"></line>
+<!-- Side branches decorative circuits -->
+<path class="opacity-50" d="M 50% 152 L 78% 152 L 78% 210" fill="none" stroke="#0284C7" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="opacity-50" d="M 50% 262 L 22% 262 L 22% 310" fill="none" stroke="#283447" stroke-dasharray="2 2" stroke-width="1.5"></path>
+</svg>
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-gold-glow text-[18px]">account_tree</span>
+<span class="font-label-md text-label-md text-text-primary uppercase">SOLAR CORE TREE MAP</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-subtle text-gold-glow">TIER 1 — 4 MATRIX</span>
+</div>
+<!-- Skill Nodes Flow Column -->
+<div class="relative z-10 flex flex-col items-center gap-space-lg w-full py-1">
+<!-- TIER 1 NODE (Mastered) -->
+<div class="flex items-center justify-center w-full max-w-sm relative">
+<button class="node-selector w-full flex items-center gap-space-sm p-space-xs rounded-xl bg-surface-subtle shadow-md hover:scale-[1.01] active:scale-95 transition-all" id="node-t1">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(245,158,11,0.3)]">
+<span class="material-symbols-outlined text-gold-glow text-[26px]">all_inclusive</span>
+<div class="absolute -bottom-1 -right-1 px-1 rounded bg-gold-core text-surface-gunmetal font-label-sm text-[9px] font-bold">3/3</div>
+</div>
+<div class="flex flex-col text-left min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-gold-glow uppercase">TIER 1 // PASSIVE</span>
+<span class="font-label-sm text-label-sm text-gold-glow flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">verified</span> MASTERED
+              </span>
+</div>
+<div class="font-title-md text-title-md text-text-primary truncate">Ancient Core Attunement</div>
+<div class="font-body-md text-body-md text-text-muted truncate">Plasma recharge velocity +15%</div>
+</div>
+</button>
+</div>
+<!-- TIER 2 NODE (Mastered) -->
+<div class="flex items-center justify-center w-full max-w-sm relative">
+<button class="node-selector w-full flex items-center gap-space-sm p-space-xs rounded-xl bg-surface-subtle shadow-md hover:scale-[1.01] active:scale-95 transition-all" id="node-t2">
+<div class="relative w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(245,158,11,0.3)]">
+<span class="material-symbols-outlined text-gold-glow text-[26px]">adjust</span>
+<div class="absolute -bottom-1 -right-1 px-1 rounded bg-gold-core text-surface-gunmetal font-label-sm text-[9px] font-bold">3/3</div>
+</div>
+<div class="flex flex-col text-left min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-gold-glow uppercase">TIER 2 // WEAPON SPECIAL</span>
+<span class="font-label-sm text-label-sm text-gold-glow flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">verified</span> MASTERED
+              </span>
+</div>
+<div class="font-title-md text-title-md text-text-primary truncate">Solar Lens Refraction</div>
+<div class="font-body-md text-body-md text-text-muted truncate">Brahmastra beam pierces shields</div>
+</div>
+</button>
+</div>
+<!-- TIER 3 NODE (Selected / In Progress / Allocatable) -->
+<div class="flex items-center justify-center w-full max-w-sm relative">
+<div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-core via-crimson-bright to-gold-glow opacity-75 blur-sm animate-pulse"></div>
+<button class="node-selector relative w-full flex items-center gap-space-sm p-space-xs rounded-xl bg-surface-container-high shadow-xl active:scale-95 transition-all" id="node-t3">
+<div class="relative w-12 h-12 rounded-lg bg-surface-subtle flex items-center justify-center shrink-0 shadow-[0_0_18px_rgba(245,158,11,0.6)]">
+<span class="material-symbols-outlined text-gold-glow text-[26px] animate-bounce">bolt</span>
+<div class="absolute -bottom-1 -right-1 px-1 rounded bg-crimson-bright text-text-primary font-label-sm text-[9px] font-bold">1/3</div>
+</div>
+<div class="flex flex-col text-left min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-crimson-bright uppercase">TIER 3 // ACTIVE FOCUS</span>
+<span class="font-label-sm text-label-sm text-gold-glow uppercase animate-pulse">ALLOCATABLE</span>
+</div>
+<div class="font-title-md text-title-md text-text-primary font-bold truncate">Vajra Arc Discharge</div>
+<div class="font-body-md text-body-md text-text-muted truncate">Chains electric shock across 2 drones</div>
+</div>
+<div class="shrink-0 pr-1">
+<span class="material-symbols-outlined text-gold-glow text-[20px]">radio_button_checked</span>
+</div>
+</button>
+</div>
+<!-- TIER 4 CAPSTONE NODE (Locked) -->
+<div class="flex items-center justify-center w-full max-w-sm relative opacity-60">
+<button class="node-selector w-full flex items-center gap-space-sm p-space-xs rounded-xl bg-surface-container-low shadow-sm" id="node-t4">
+<div class="relative w-12 h-12 rounded-lg bg-surface-gunmetal flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[24px]">crisis_alert</span>
+<div class="absolute -bottom-1 -right-1 px-1 rounded bg-surface-container-highest text-text-muted font-label-sm text-[9px]">0/1</div>
+</div>
+<div class="flex flex-col text-left min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">TIER 4 // CAPSTONE</span>
+<span class="font-label-sm text-label-sm text-crimson-bright flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">lock</span> LOCKED (LVL 50)
+              </span>
+</div>
+<div class="font-title-md text-title-md text-text-muted truncate">Celestial Brahmastra Singularity</div>
+<div class="font-body-md text-body-md text-text-muted truncate">Overdrives core into 30m solar flare</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Selected Node Detail Inspection Card -->
+<div class="relative w-full rounded-xl bg-surface-gunmetal p-space-md shadow-xl flex flex-col gap-space-sm overflow-hidden" id="node-detail-panel">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-gold-core animate-pulse"></span>
+<span class="font-label-md text-label-md text-gold-glow uppercase">NODE DIAGNOSTIC INSPECTOR</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-cyan-scan uppercase">COST: 1 POINT</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-md text-headline-md text-text-primary tracking-tight">Vajra Arc Discharge</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-subtle text-gold-glow font-bold uppercase">RANK 1 OF 3</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted">
+        Channels ancient electromagnetic celestial frequency through standard gauntlet repulsors. Repulsor impacts release high-voltage ionization leaping onto adjacent airborne adversaries.
+      </p>
+</div>
+<!-- Comparative Buff Details (Current vs Next) -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="p-space-xs rounded-lg bg-surface-subtle flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">CURRENT EFFECT (RANK 1)</span>
+<span class="font-title-md text-title-md text-gold-glow font-bold">+15% Chain Damage</span>
+<span class="font-body-md text-body-md text-text-muted">Arcs to 2 nearby target drones</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-high flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-cyan-scan uppercase">NEXT RANK EFFECT (RANK 2)</span>
+<span class="font-title-md text-title-md text-cyan-scan font-bold">+30% Chain &amp; 0.5s Stun</span>
+<span class="font-body-md text-body-md text-cyan-scan">Arcs to 3 drones with neural lock</span>
+</div>
+</div>
+<!-- Requirements & Fast Allocation CTA Button -->
+<div class="flex items-center justify-between gap-space-sm pt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">ENERGY CONSUMPTION</span>
+<span class="font-label-md text-label-md text-text-primary">45 GW // -12% CORE DRAIN</span>
+</div>
+<button class="flex items-center justify-center gap-1.5 px-space-md py-2.5 rounded-lg bg-gold-core hover:bg-gold-glow text-surface-gunmetal font-headline-md text-title-md font-bold uppercase shadow-[0_0_15px_rgba(245,158,11,0.4)] active:scale-95 transition-all" id="allocate-btn">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>ALLOCATE POINT</span>
+</button>
+</div>
+</div>
+<!-- Tactical Visual Armor Schematics Placeholder -->
+<div class="w-full rounded-xl overflow-hidden bg-surface-gunmetal shadow-lg flex flex-col">
+<div class="relative w-full h-36">
+<img class="w-full h-full object-cover" data-alt="Cinematic close-up of Aryan Sagar's futuristic crimson and gold Garuda armor chest piece at SARC Agra laboratory with glowing cyan holographic neural circuits, particle energy conduits, deep gunmetal nano-carbon plating, dark sci-fi brutalist Indian superhero aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM_lBeNkKZcYzOe6Fw7MFEW1KzbXJs3-JP7zy2EefjLBKP7xN92XCu7cE7Q91ScwV_tBIit9TaqyJOadowBohoGIB-fzCCTrFhfkai6XMXmFFePZhqh43D8-3EKSvIKQYV59RtrFBsKpjrwzyAlBGV_LUr7hswLPUzqvD-n4BD6xsUg56cOvNL6KZaPDe2nwtlKAHQaUYNI4O7P-khv_WYa5NLib738S-106Ax5jo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-gunmetal via-surface-gunmetal/40 to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1.5 px-2 py-0.5 rounded bg-hud-glass backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-crimson-bright animate-ping"></span>
+<span class="font-label-sm text-label-sm text-text-primary uppercase">GAUNTLET COIL HARMONICS</span>
+</div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-cyan-scan">AGRA SARC BENCH 04</span>
+<span class="font-headline-md text-headline-md text-text-primary font-bold">GARUDA MK-IX WEAPON MATRIX</span>
+</div>
+<div class="px-2 py-1 rounded bg-surface-subtle text-gold-glow font-label-md text-label-md uppercase">
+          STABLE
+        </div>
+</div>
+</div>
+</div>
+<!-- AVI AI Interactive Holographic Communication HUD Card -->
+<div class="relative w-full rounded-xl p-space-md bg-hud-glass backdrop-blur-xl shadow-lg flex items-start gap-space-sm overflow-hidden">
+<!-- Animated cyan telemetry glow line -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-scan via-cyan-dim to-transparent"></div>
+<!-- AI Voice Node Waveform Visual -->
+<div class="relative w-10 h-10 rounded-lg bg-surface-subtle flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-cyan-scan text-[24px]">graphic_eq</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-cyan-scan animate-ping opacity-75"></span>
+</div>
+<!-- AI Dialogue Text Box -->
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-cyan-scan tracking-widest uppercase">[AVI SYSTEM OS // v4.2]</span>
+<span class="font-label-sm text-label-sm text-text-muted">NEURAL AUDIO LINK</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary mt-0.5">
+        “Namaste Aryan Bhaiya! Investing in the Solar Core tree will maximize your beam penetration against the Yamuna Goliath Harvester hovering near Taj West Gate!”
+      </p>
+</div>
+</div>
+<!-- Pilot Stat Growth Summary (Tactical Bottom Footer Card) -->
+<div class="w-full rounded-xl p-space-md bg-surface-gunmetal shadow-2xl flex flex-col gap-space-md mb-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">SUIT SYNC REAL-TIME TELEMETRY</span>
+<span class="font-label-sm text-label-sm text-cyan-scan uppercase">CORE HARMONIC: 100%</span>
+</div>
+<!-- 4-Stat Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Stat 1: Attack Power -->
+<div class="flex flex-col p-space-xs rounded bg-surface-subtle">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">ATTACK POWER</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-text-primary font-bold">3,840</span>
+<span class="font-label-sm text-label-sm text-gold-glow font-bold">+240</span>
+</div>
+</div>
+<!-- Stat 2: Armor -->
+<div class="flex flex-col p-space-xs rounded bg-surface-subtle">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">ARMOR PLATING</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-text-primary font-bold">2,960</span>
+<span class="font-label-sm text-label-sm text-cyan-scan font-bold">+180</span>
+</div>
+</div>
+<!-- Stat 3: Supersonic Thrust -->
+<div class="flex flex-col p-space-xs rounded bg-surface-subtle">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">FLIGHT THRUST</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-text-primary font-bold">MACH 3.8</span>
+<span class="font-label-sm text-label-sm text-crimson-bright font-bold">+0.4</span>
+</div>
+</div>
+<!-- Stat 4: Core Resonance -->
+<div class="flex flex-col p-space-xs rounded bg-surface-subtle">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">CORE RESONANCE</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-gold-glow font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-gold-glow">SOLAR</span>
+</div>
+</div>
+</div>
+<!-- Primary Action Hero Button (Deploy/Sync) -->
+<button class="w-full flex items-center justify-center gap-space-xs py-3.5 px-space-md rounded-xl bg-primary-container text-on-primary-container font-headline-md text-headline-md uppercase tracking-wider shadow-[0_0_20px_rgba(224,26,34,0.45)] hover:brightness-110 active:scale-95 transition-all" id="sync-confirm-btn">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+<span>CONFIRM &amp; SYNC NEURAL NODES</span>
+</button>
+</div>
+</div>
+<!-- Inline Interaction Logic -->
+<script>
+  (function() {
+    let availablePoints = 4;
+    let nodeRank = 1;
+
+    const allocateBtn = document.getElementById('allocate-btn');
+    const pointsCounter = document.getElementById('available-points-counter');
+    const respecBtn = document.getElementById('respec-btn');
+    const confirmSyncBtn = document.getElementById('sync-confirm-btn');
+
+    if (allocateBtn && pointsCounter) {
+      allocateBtn.addEventListener('click', function() {
+        if (availablePoints > 0 && nodeRank < 3) {
+          availablePoints--;
+          nodeRank++;
+          pointsCounter.textContent = availablePoints + ' NEURAL POINTS';
+          allocateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> RANK ' + nodeRank + ' ALLOCATED';
+          allocateBtn.classList.remove('bg-gold-core');
+          allocateBtn.classList.add('bg-cyan-scan');
+          setTimeout(() => {
+            allocateBtn.classList.remove('bg-cyan-scan');
+            allocateBtn.classList.add('bg-gold-core');
+            allocateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">add_circle</span> ALLOCATE POINT';
+          }, 1200);
+        } else if (nodeRank >= 3) {
+          allocateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> MAXED OUT';
+        }
+      });
+    }
+
+    if (respecBtn && pointsCounter) {
+      respecBtn.addEventListener('click', function() {
+        availablePoints = 4;
+        nodeRank = 1;
+        pointsCounter.textContent = '4 NEURAL POINTS';
+        respecBtn.classList.add('text-gold-glow');
+        setTimeout(() => {
+          respecBtn.classList.remove('text-gold-glow');
+        }, 800);
+      });
+    }
+
+    if (confirmSyncBtn) {
+      confirmSyncBtn.addEventListener('click', function() {
+        const originalText = confirmSyncBtn.innerHTML;
+        confirmSyncBtn.innerHTML = '<span class="material-symbols-outlined text-[22px] animate-spin">refresh</span> NEURAL LINK SYNCED!';
+        confirmSyncBtn.classList.add('bg-gold-core', 'text-surface-gunmetal');
+        confirmSyncBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+        setTimeout(() => {
+          confirmSyncBtn.innerHTML = originalText;
+          confirmSyncBtn.classList.remove('bg-gold-core', 'text-surface-gunmetal');
+          confirmSyncBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+        }, 1500);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-gunmetal/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-gold-glow"><div class="h-20 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="hangar" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Hangar</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="armory" href="#"><span class="material-symbols-outlined text-[22px]">hardware</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Armory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="hud-combat-simulation" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm uppercase tracking-wider">HUD Combat</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="sarc-lab" href="#"><span class="material-symbols-outlined text-[22px]">science</span><span class="font-label-sm text-label-sm uppercase tracking-wider">SARC Lab</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-text-muted hover:text-on-surface transition-colors" data-path="avi-ai" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm uppercase tracking-wider">AVI AI</span></a></div></nav></body></html>
