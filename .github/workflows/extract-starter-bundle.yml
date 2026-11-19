@@ -1,0 +1,35 @@
+
+name: Extract Project Garuda Starter
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract starter ZIP
+        run: |
+          mkdir -p /tmp/garuda
+          unzip -o Project_Garuda_Starter.zip -d /tmp/garuda
+          cp /tmp/garuda/index.html .
+          cp /tmp/garuda/README_PROJECT_GARUDA.txt .
+          cp -R /tmp/garuda/stitch_core_design_system .
+          cp -R /tmp/garuda/godot_ironboy_prototype .
+
+      - name: Save extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html README_PROJECT_GARUDA.txt stitch_core_design_system godot_ironboy_prototype
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract Project Garuda starter files"
+            git push
+          fi
